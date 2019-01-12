@@ -1,0 +1,18 @@
+Follow the steps given below to generate the QSMRQ queries against fb15k knowledge graph.
+
+Prerequisites:
+1.  Python Environment as described in -
+2.  WORK_DIR environment variable has been set
+3.  Go to folder KG-REP/, after downloading the code from github
+
+Step-1: run python gen/get_single_path_data.py -
+        this generates single file per path type in folder WORK_DIR/<data package name>/wip-data/query_prep/2_single_paths
+
+Step-2: run gen/get_path_pairs.py - this will generate files in folder
+        WORK_DIR/<data package name>/wip-data/query_prep/3_path_pair_data
+        Filename - Film-6-1.csv will indicate that target is Film, and its a combination of the path 1 and path 6 of
+        templates present in 1_single_path_templates.
+        This file will contain - e1, r1, e2, r2, e3
+
+Step-3: Then run python gen/generate_questions.py to generate questions, this program takes
+        templates as input, and also takes files such as Film-6-1.csv as input to generate these questions.

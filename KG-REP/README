@@ -1,0 +1,20 @@
+
+1.  Set-up the python 2.7.13 environment for running KG-REP, install miniconda and pip
+
+2.  Create new miniconda env, let's say with a name mrr
+    using following command:
+    conda env create -f=environment.yml -n mrr
+
+3.  To generate the data, read the file --
+
+3.  To learn the embeddings, read the file kgrep/embd/README
+
+%%%%%%%%%%%%%  HOW TO RUN KG-REP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1.  After embeddings are ready, open the file run_conf/fb15k.conf or run_conf/webqsp.conf.
+    Edit the file if required.
+
+2.  After that run the program python kgrep/model_stqa.py
+    this program takes - run_conf/fb15k.conf file as input
+    in the .conf file, first set load_command as 1 and then run the program once
+    after that set the value of load_command to 0 and then run the it again.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
